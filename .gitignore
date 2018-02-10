@@ -1,0 +1,5 @@
+*.aux
+*.log
+*.png
+*.pdf
+!example.pdf

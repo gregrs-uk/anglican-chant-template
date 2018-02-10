@@ -1,0 +1,102 @@
+\usepackage{array}
+
+
+
+% HORIZONTAL SPACING
+
+\setlength\parindent{0pt}
+
+% amount of space for notes e.g. dynamics and Full
+\newlength\notesamount
+\setlength\notesamount{4.5em}
+
+% amount of space for verse numbers
+\newlength\versenumamount
+\setlength\versenumamount{1.5em}
+
+% amount of space for verse text
+\newlength\textamount
+\setlength\textamount{20cm}
+
+% amount to indent second half of each verse
+\newlength\indentamount
+\setlength\indentamount{1em}
+
+
+
+% VERTICAL SPACING
+
+% vertical space between verses
+\newlength\versesepamount
+\setlength\versesepamount{0.7em}
+
+% vertical space between sections of psalm
+\newlength\stanzagapamount
+\setlength\stanzagapamount{1.2em}
+
+
+
+% define right-aligned paragraph column for use below
+\newcolumntype{R}[1]
+    {>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+% verse number
+\newcounter{VerseCounter}
+
+% environment for psalm text
+\newenvironment{psalm}[1][1]
+{
+    % number of first verse
+    \setcounter{VerseCounter}{#1}
+    \begin{tabular}{ R{\notesamount} R{\versenumamount} p{\textamount} }
+}
+{
+    \end{tabular}
+}
+
+
+
+% bar line
+\newcommand{\bl}{\textbar\space}
+
+% dot for change of note
+\newcommand{\ch}
+    {\hspace{-0.15em}$\vcenter{\hbox{\tiny$\bullet$}}$\hspace{0.15em}}
+
+% pause between words
+\newcommand{\ps}
+    {*\space}
+
+% dynamics style
+\newcommand{\dyn}[1]{\textbf{\textit{#1}}}
+
+% second half of chant
+\newcommand{\second}{$\dagger$}
+
+% dot above letter to denote syllable
+\newcommand{\syl}[1]{$\dot{\textrm{#1}}$}
+
+
+
+% verses use the following columns:
+% dynamics and full markings | verse numbers | verse text
+
+% normal verse
+\newcommand{\vs}[4]{#1 & \theVerseCounter.\stepcounter{VerseCounter} &
+    #2\thinspace :\\
+    #3 & &\hspace{\indentamount}#4\\[\versesepamount]}
+
+% verse without gap in middle
+\newcommand{\vscontinue}[4]{#1 & \theVerseCounter.\stepcounter{VerseCounter} &
+    #2\thinspace : \raisebox{-0.08em}{\large{$\longrightarrow$}}\\
+    #3 & &\hspace{\indentamount}#4\\[\versesepamount]}
+
+% verse without verse number e.g. Gloria
+\newcommand{\vsnonums}[4]{#1 & & #2\thinspace :\\
+    #3 & &\hspace{\indentamount}#4\\[\versesepamount]}
+
+% break a long line and indent appropriately
+\newcommand{\breaklongline}{\newline\hbox{}\hspace{2\indentamount}}
+
+% gap to signify a new section of the psalm
+\newcommand{\stanzagap}{\vspace{\stanzagapamount}\\[-12pt]}

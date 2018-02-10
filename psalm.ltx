@@ -1,0 +1,53 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[top=2cm,bottom=2cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{libertine}
+\usepackage{graphicx}
+\usepackage{psalm}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+    {\Large \textbf{Psalm 151}}\\[12pt]
+    \textit{An example psalm}\\[30pt]
+    \includegraphics[resolution=600, scale=0.97]{chant.png}
+\end{center}
+\vspace{24pt}
+
+% override width of verse text because these lines are quite short
+\setlength\textamount{12cm}
+
+\begin{center}
+\begin{psalm}[9] % override number of first verse (optional)
+
+\vs{Full\quad\dyn{f}}{The first part of the first \bl verse is \bl forte}
+{\dyn{p}}{And the second part \bl of the \ch first \bl verse is \bl piano.}
+
+\vscontinue{Full\quad\dyn{mf}}{Here is the \bl second \bl verse}
+{}{Which con- \bl tinues \ch with- \bl out a \bl break.}
+
+\vs{\second}{This verse should use the second \bl half \ch of the \bl chant}
+{}{Which is \bl speci-fied \bl using \ch a \bl dagger.}
+
+\vs{}{Sometimes you may want to pause \ps in the \bl middle \ch of a \bl verse}
+{}{Or to specify the n\syl{u}mb\syl{e}r of \bl syllab-les \bl using \bl dots.}
+
+\vs{}{If a verse is very long and goes on and on forever\breaklongline
+    you may want to break in the \bl middle \ch of a \bl line}
+{}{And sometimes you may want a vertical \bl space \bl after \ch a \bl verse.}
+
+\stanzagap
+
+\vsnonums{\dyn{f}}{Verse numbers are \bl au-to- \bl matic}
+{}{But \bl sometimes \ch you \bl may not \bl want them}
+
+\vsnonums{}{For example \bl in the \bl Gloria}
+{}{At the \bl end \bl of a \bl psalm.}
+
+\end{psalm}
+\end{center}
+
+\end{document}
