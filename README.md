@@ -1,6 +1,6 @@
 # [Anglican chant](https://en.wikipedia.org/wiki/Anglican_chant) template
 
-A template for typesetting psalms using [LaTeX](https://www.latex-project.org), [LilyPond](http://lilypond.org) and [GNU Make](https://www.gnu.org/software/make/). For an example, see the `example.pdf` file.
+A template for typesetting psalms using [LaTeX](https://www.latex-project.org), [LilyPond](http://lilypond.org) and [GNU Make](https://www.gnu.org/software/make/). For an example, see the `psalm.pdf` file.
 
 ## Files
 
@@ -9,8 +9,9 @@ A template for typesetting psalms using [LaTeX](https://www.latex-project.org), 
 | `psalm.ltx` | the LaTeX file containing the text |
 | `psalm.sty` | the LaTeX style file which defines various things |
 | `chant.ly` | the LilyPond file for the chant |
-| `chant.png` | the image file for the chant, created automatically by `make` |
 | `Makefile` | defines how to build the final PDF from each component |
+| `chant.png` | the image file for the chant, created automatically by `make` |
+| `psalm.pdf` | the final PDF file, created automatically by `make` |
 
 ## Example usage
 

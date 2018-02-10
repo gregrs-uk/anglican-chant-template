@@ -2,4 +2,4 @@
 *.log
 *.png
 *.pdf
-!example.pdf
+!psalm.pdf
