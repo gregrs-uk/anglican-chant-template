@@ -2,9 +2,12 @@
 
 \usepackage[top=2cm,bottom=2cm,left=1.5cm,right=1.5cm]{geometry}
 \usepackage[T1]{fontenc}
-\usepackage{libertine}
 \usepackage{graphicx}
 \usepackage{psalm}
+\usepackage{fontspec}
+\usepackage{lilyglyphs}
+
+\setmainfont{TeX Gyre Schola}
 
 \pagestyle{empty}
 
@@ -13,12 +16,12 @@
 \begin{center}
     {\Large \textbf{Psalm 151}}\\[12pt]
     \textit{An example psalm}\\[30pt]
-    \includegraphics[resolution=600, scale=0.97]{chant.png}
+    \includegraphics[scale=0.1164]{chant.png}
 \end{center}
 \vspace{24pt}
 
 % override width of verse text because these lines are quite short
-\setlength\textamount{12cm}
+\setlength\textamount{13cm}
 
 \begin{center}
 \begin{psalm}[9] % override number of first verse (optional)
