@@ -56,12 +56,17 @@
 
 
 
-% bar line
-\newcommand{\bl}{\textbar\space}
+% below we set some characters as 'active' characters,
+% allowing them to be defined as macros
 
-% dot for change of note
-\newcommand{\ch}
-    {\hspace{-0.15em}$\vcenter{\hbox{\tiny$\bullet$}}$\hspace{0.15em}}
+% bar line
+\catcode`|=\active
+\newcommand{|}{\textbar}
+
+% dot for change of note (use instead of space between words)
+\catcode`_=\active
+\newcommand{_}
+    {\hspace{0.15em}$\vcenter{\hbox{\tiny$\bullet$}}$\hspace{0.15em}}
 
 % pause between words
 \newcommand{\ps}
