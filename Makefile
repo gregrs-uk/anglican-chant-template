@@ -1,6 +1,6 @@
 default: psalm.pdf
 
-psalm.pdf: psalm.ltx chant.png
+psalm.pdf: psalm.ltx psalm.sty chant.png
 	pdflatex psalm.ltx
 	rm psalm.aux psalm.log
 
